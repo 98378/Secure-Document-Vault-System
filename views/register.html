@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Register
+</title>
+
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="/css/style.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body
+class="d-flex justify-content-center align-items-center">
+
+<!-- ===================================== -->
+<!-- REGISTER CARD -->
+<!-- ===================================== -->
+
+<div
+class="cyber-card p-4"
+style="width:420px;">
+
+<h2 class="glow text-center mb-4">
+
+<i class="fa-solid fa-user-shield"></i>
+
+Create Account
+
+</h2>
+
+<!-- ===================================== -->
+<!-- REGISTER FORM -->
+<!-- ===================================== -->
+
+<form id="registerForm">
+
+<!-- USERNAME -->
+
+<input
+id="username"
+type="text"
+class="form-control cyber-input mb-3"
+placeholder="Username"
+required>
+
+<!-- EMAIL -->
+
+<input
+id="email"
+type="email"
+class="form-control cyber-input mb-3"
+placeholder="Email Address"
+required>
+
+<!-- PASSWORD -->
+
+<div class="position-relative mb-3">
+
+<input
+id="password"
+type="password"
+class="form-control cyber-input"
+placeholder="Password"
+required>
+
+<button
+type="button"
+id="togglePassword"
+class="btn position-absolute top-50 end-0 translate-middle-y me-2"
+style="
+border:none;
+background:none;
+color:#00C2FF;
+">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+</div>
+
+<!-- ROLE -->
+
+<select
+id="role"
+class="form-control cyber-input mb-3"
+required>
+
+<option value="user">
+User
+</option>
+
+<option value="manager">
+Manager
+</option>
+
+</select>
+
+<!-- PASSWORD STRENGTH -->
+
+<div class="mt-3">
+
+<div
+style="
+height:8px;
+background:#1F2937;
+border-radius:20px;
+overflow:hidden;
+">
+
+<div
+id="strengthBar"
+style="
+height:100%;
+width:0%;
+background:red;
+transition:0.3s;
+">
+</div>
+
+</div>
+
+<div
+id="passwordStrength"
+class="mt-2 small">
+</div>
+
+</div>
+
+<!-- REGISTER BUTTON -->
+
+<button
+class="cyber-btn w-100 mt-4">
+
+<i class="fa-solid fa-user-plus"></i>
+
+Register
+
+</button>
+
+</form>
+
+<!-- ===================================== -->
+<!-- 2FA SETUP -->
+<!-- ===================================== -->
+
+<div
+id="twoFactorSetup"
+style="display:none;"
+class="mt-4 text-center">
+
+<h4 class="text-info mb-3">
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+Setup Google Authenticator
+
+</h4>
+
+<p class="small text-light">
+
+Scan this QR code using
+
+:contentReference[oaicite:0]{index=0}
+
+</p>
+
+<img
+id="qrCode"
+class="img-fluid rounded mb-3"
+style="
+max-width:220px;
+background:white;
+padding:10px;
+">
+
+<input
+id="otpInput"
+type="text"
+class="form-control cyber-input mb-3"
+placeholder="Enter 6-digit code">
+
+<button
+id="verify2FABtn"
+class="cyber-btn w-100">
+
+Verify & Enable 2FA
+
+</button>
+
+</div>
+
+<!-- ===================================== -->
+<!-- LOGIN LINK -->
+<!-- ===================================== -->
+
+<p class="text-center mt-4">
+
+Already have an account?
+
+<a
+href="/login.html"
+style="
+color:#00C2FF;
+text-decoration:none;
+">
+
+Login
+
+</a>
+
+</p>
+
+</div>
+
+<!-- ===================================== -->
+<!-- SCRIPT -->
+<!-- ===================================== -->
+
+<script src="/js/auth.js"></script>
+
+</body>
+
+</html>

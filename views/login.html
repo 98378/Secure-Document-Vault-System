@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Secure Login
+</title>
+
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="/css/style.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body
+class="d-flex justify-content-center align-items-center">
+
+<!-- ===================================== -->
+<!-- TOAST CONTAINER -->
+<!-- ===================================== -->
+
+<div
+id="toastContainer"
+style="
+position:fixed;
+top:20px;
+right:20px;
+z-index:99999;
+">
+</div>
+
+<!-- ===================================== -->
+<!-- LOGIN CARD -->
+<!-- ===================================== -->
+
+<div
+class="cyber-card p-4"
+style="width:400px;">
+
+<h2 class="glow text-center mb-4">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+Secure Login
+
+</h2>
+
+<!-- ===================================== -->
+<!-- LOGIN FORM -->
+<!-- ===================================== -->
+
+<form id="loginForm">
+
+<!-- EMAIL -->
+
+<input
+id="email"
+type="email"
+class="form-control cyber-input mb-3"
+placeholder="Email Address"
+required>
+
+<!-- PASSWORD -->
+
+<div class="position-relative">
+
+<input
+id="password"
+type="password"
+class="form-control cyber-input"
+placeholder="Password"
+required>
+
+<button
+type="button"
+id="togglePassword"
+class="btn position-absolute top-50 end-0 translate-middle-y me-2"
+style="
+border:none;
+background:none;
+color:#00C2FF;
+">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+</div>
+
+<!-- LOGIN BUTTON -->
+
+<button
+class="cyber-btn w-100 mt-4">
+
+<i class="fa-solid fa-right-to-bracket"></i>
+
+Login
+
+</button>
+
+</form>
+
+<!-- ===================================== -->
+<!-- 2FA FORM -->
+<!-- ===================================== -->
+
+<form
+id="twoFactorForm"
+style="display:none;">
+
+<h4 class="text-center text-info mt-4 mb-3">
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+Google Authenticator
+
+</h4>
+
+<input
+id="otpCode"
+type="text"
+class="form-control cyber-input mb-3"
+placeholder="Enter 6-digit code">
+
+<button
+type="submit"
+class="cyber-btn w-100">
+
+Verify Code
+
+</button>
+
+</form>
+
+<!-- ===================================== -->
+<!-- REGISTER LINK -->
+<!-- ===================================== -->
+
+<p class="text-center mt-4">
+
+Don't have an account?
+
+<a
+href="/register.html"
+style="
+color:#00C2FF;
+text-decoration:none;
+">
+
+Register
+
+</a>
+
+</p>
+
+</div>
+
+<!-- ===================================== -->
+<!-- SCRIPTS -->
+<!-- ===================================== -->
+
+<script src="/js/auth.js"></script>
+
+</body>
+
+</html>
